@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import FormLogin from "../components/FormLogin";
-import InputLogin from "../components/InputLogin";
-import TitleForm from "../components/TitleForm";
+import FormLogin from "./FormLogin";
+import InputLogin from "./InputLogin";
+import TitleForm from "./TitleForm";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import useAlert from "../hooks/useAlert";
-import Alert from "../components/Alert";
+import Alert from "./Alert";
 import clientAxios from "../config/axios";
 function NewPassword() {
     const [password, setPassword] = useState('');

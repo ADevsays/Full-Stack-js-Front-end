@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgetPass from './pages/ForgetPass';
 import Confirm from './pages/Confirm';
-import NewPassword from './pages/newPassword';
+import NewPassword from './components/NewPassword';
 import { AuthProvider } from './context/AuthProvider';
 import { PacientsProvider } from './context/PacientsProvider';
 import ProtectedRoute from './layout/ProtectedRoute';
