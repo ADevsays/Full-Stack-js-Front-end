@@ -1,0 +1,37 @@
+{
+  "veterinaries": [
+    {
+      "name": "Rafa",
+      "email": "correo@corre.com",
+      "password": "123456",
+      "repeatPassword": "123456",
+      "id": 1
+    }
+  ],
+  "pacients": [
+    {
+      "_id": "641dea29024ffbc5c0f4862d",
+      "name": "Moon",
+      "owner": "Rafa",
+      "email": "rafa@rafa.com",
+      "date": "2023-03-24T18:21:27.068Z",
+      "symptoms": "Just sleep",
+      "veterinaryID": "641de8bda7a0efd70862fb98",
+      "createdAt": "2023-03-24T18:21:29.885Z",
+      "updatedAt": "2023-03-24T18:21:29.885Z",
+      "__v": 0
+    },
+    {
+      "_id": "641debb481a6ad13d6dce12e",
+      "name": "Ash",
+      "owner": "Luis",
+      "email": "rafa@rafa.com",
+      "date": "2023-03-24T18:28:03.083Z",
+      "symptoms": "Just eat",
+      "veterinaryID": "641de8bda7a0efd70862fb98",
+      "createdAt": "2023-03-24T18:28:04.992Z",
+      "updatedAt": "2023-03-24T18:28:04.992Z",
+      "__v": 0
+    }
+  ]
+}
