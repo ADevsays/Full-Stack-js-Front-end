@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import AuthLayout from './layout/AuthLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -15,27 +15,29 @@ import ChangePassword from './pages/ChangePassword';
 function App() {
   return (
     <div>
-      <AuthProvider>
-        <PacientsProvider>
-          <Routes>
-            
-            <Route path='/' element={<AuthLayout />}>
-              <Route index element={<Login />} />
-              <Route path='registrar' element={<Register />} />
-              <Route path='recuperar-password' element={<ForgetPass />} />
-              <Route path='recuperar-password/:token' element={<NewPassword />} />
-              <Route path='confirmar/:id' element={<Confirm />} />
-            </Route>
+      <HashRouter>
+        <AuthProvider>
+          <PacientsProvider>
+            <Routes>
 
-            <Route path='/admin' element={<ProtectedRoute />}>
-              <Route index element={<AdminPacients />} />
-              <Route path='perfil' element={<EditProfile />} />
-              <Route path='cambiar-password' element={<ChangePassword />} />
-            </Route>
+              <Route path='/' element={<AuthLayout />}>
+                <Route index element={<Login />} />
+                <Route path='registrar' element={<Register />} />
+                <Route path='recuperar-password' element={<ForgetPass />} />
+                <Route path='recuperar-password/:token' element={<NewPassword />} />
+                <Route path='confirmar/:id' element={<Confirm />} />
+              </Route>
 
-          </Routes>
-        </PacientsProvider>
-      </AuthProvider>
+              <Route path='/admin' element={<ProtectedRoute />}>
+                <Route index element={<AdminPacients />} />
+                <Route path='perfil' element={<EditProfile />} />
+                <Route path='cambiar-password' element={<ChangePassword />} />
+              </Route>
+
+            </Routes>
+          </PacientsProvider>
+        </AuthProvider>
+      </HashRouter>
     </div>
   )
 }
