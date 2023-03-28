@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import AuthLayout from './layout/AuthLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -15,7 +15,6 @@ import ChangePassword from './pages/ChangePassword';
 function App() {
   return (
     <div>
-      <HashRouter>
         <AuthProvider>
           <PacientsProvider>
             <Routes>
@@ -37,7 +36,6 @@ function App() {
             </Routes>
           </PacientsProvider>
         </AuthProvider>
-      </HashRouter>
     </div>
   )
 }
